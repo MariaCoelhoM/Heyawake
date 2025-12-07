@@ -78,7 +78,6 @@ class HeyawakeSolver:
                         
                     region_size = len(region_cells)
                     
-                    # 🔥 NOVA LÓGICA: Probabilidade dinâmica baseada no tamanho do tabuleiro
                     # Tabuleiros maiores = mais constraints
                     constraint = -1
                     
@@ -120,7 +119,7 @@ class HeyawakeSolver:
     
     def is_valid_placement(self, row, col, value):
         """
-        REGRA 1 (CRÍTICA): Células pretas NÃO podem ser adjacentes ortogonalmente
+        REGRA 1: Células pretas NÃO podem ser adjacentes ortogonalmente
         """
         if value == 2:  # Tentando colocar PRETO
             for dr, dc in [(-1,0), (0,1), (1,0), (0,-1)]:
